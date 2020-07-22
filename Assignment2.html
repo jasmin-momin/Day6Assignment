@@ -1,0 +1,44 @@
+<html>
+<head>
+  <title>Multiplication Table</title>
+  </head>
+  <script>
+function myFunction()
+{
+var Number = document.getElementById("TN").value;
+var T;
+var I = document.getElementById("IN").value;
+var E = document.getElementById("EN").value;
+var temp="";
+for (T = I; T <= E; T++) {
+temp+="<tr><td>"+Number+"</td><td>*</td><td>" + T + "</td><td>=</td><td>" + Number*T +"</td></tr>"; 
+}
+
+$("#displayTables").append(temp);
+
+}
+</script>
+<body>
+
+<h2>MultiplicationTable</h2
+
+<form action>
+Table Number:<br>
+<input type="text" id="TN" name="TableNumber">
+<br>
+Initial Number:<br>
+<input type="text" id="IN" name="InitialNumber">
+<br>
+Ending Number:<br>
+<input type="text" id="EN" name="EndingNumber">
+</form>
+
+<br><br>    
+   
+
+<button onclick="myFunction()">Print Table</button>
+<table class="table table-bordered"  id="displayTables">
+
+</table>
+</body>
+</html>
