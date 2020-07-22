@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>My Web Page</title>
+<script>
+    var name = prompt("Enter the user name");
+  alert('welcome to ' + name);
+
+const ctime = document.getElementById('time');
+function clock(){
+    let date = new Date();
+    let time = date.toLocaleTimeString();
+    ctime.innerText = time;
+}
+
+// clock();
+
+setInterval(clock,1000);
+</script>
+</head>
+<body>
+<h1>Welcome page</h1>
+</body>
+</html>
